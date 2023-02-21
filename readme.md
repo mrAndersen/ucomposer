@@ -1,2 +1,2 @@
-`` Composer outdated command in C++
+Composer outdated command in C++
 
