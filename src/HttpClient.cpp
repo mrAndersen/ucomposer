@@ -17,6 +17,7 @@ std::optional<nlohmann::json> HttpClient::getJson(const std::string &path) {
 
     curl_easy_setopt(curl, CURLOPT_URL, path.c_str());
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5L);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &body);
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, HttpClient::write);
 
