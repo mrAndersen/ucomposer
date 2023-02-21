@@ -3,6 +3,9 @@ project(ucomposer)
 
 find_package(CURL)
 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2 -march=x86-64")
+
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
         "src/*.h"
         "src/*.hpp"
